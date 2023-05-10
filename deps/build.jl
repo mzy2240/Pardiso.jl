@@ -20,6 +20,7 @@ elseif Sys.islinux()
 [
     "libpardiso600-GNU800-X86-64.so",
     "libpardiso600-GNU720-X86-64.so",
+    "libpardiso800-GNU831-X86-64-March18-2023.so",
 ]
 else
     error("unhandled OS")
@@ -56,7 +57,7 @@ function find_paradisolib()
             end
         end
     end
-    println("did not find libpardiso, assuming PARDISO 5/6 is not installed")
+    println("did not find libpardiso, assuming PARDISO 5/6/8 is not installed")
     return "", false
 end
 
